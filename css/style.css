@@ -98,23 +98,23 @@ body {
 	background-repeat: no-repeat;
 }
 
-.nav li a.icon-menu:hover,
-.nav li a.icon-menu.selected {
+.nav li a.icon-menus:hover,
+.nav li a.icon-menus.selected {
 	background-image: url(../images/icon-menu.gif);
 }
 
-.nav li a.icon-phone:hover,
-.nav li a.icon-phone.selected {
+.nav li a.icon-contact:hover,
+.nav li a.icon-contact.selected {
 	background-image: url(../images/icon-phone.gif);
 }
 
-.nav li a.icon-pencil:hover,
-.nav li a.icon-pencil.selected {
+.nav li a.icon-bookings:hover,
+.nav li a.icon-bookings.selected {
 	background-image: url(../images/icon-pencil.gif);
 }
 
-.nav li a.icon-camera:hover,
-.nav li a.icon-camera.selected {
+.nav li a.icon-gallery:hover,
+.nav li a.icon-gallery.selected {
 	background-image: url(../images/icon-camera.gif);
 }
 
