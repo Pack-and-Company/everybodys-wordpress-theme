@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'UbahnLightRegular';
+    src: url('../fonts/ubahn-light-webfont.eot');
+    src: url('../fonts/ubahn-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ubahn-light-webfont.woff') format('woff'),
+         url('../fonts/ubahn-light-webfont.ttf') format('truetype'),
+         url('../fonts/ubahn-light-webfont.svg#UbahnLightRegular') format('svg');
+}
+@font-face {
+    font-family: 'LucidaFaxDemibold';
+    src: url('../fonts/lucidafax-demi-webfont.eot');
+    src: url('../fonts/lucidafax-demi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lucidafax-demi-webfont.woff') format('woff'),
+         url('../fonts/lucidafax-demi-webfont.ttf') format('truetype'),
+         url('../fonts/lucidafax-demi-webfont.svg#LucidaFaxDemibold') format('svg');
+}
+
+body {
+	font-family: 'UbahnLightRegular';
+	line-height: 20px;
+	font-size: 15px;
+}
+
+.page {
+	height: 766px;
+	background-attachment: scroll;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 960px;
+	height: 706px;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+
+.container {
+	float: left;
+}
+
+.menu {
+	width: 293px;
+	min-height: 162px;
+	margin-left: 25px;
+}
+
+.main {
+	padding-top: 180px;
+	width: 620px;
+	border-left: 1px solid #CCC;
+	padding-left: 20px;
+}
+
+.content {
+	margin-top: 6px;
+	max-height: 430px;
+	overflow: hidden;
+}
+
+.footer {
+	height: 54px;
+	border-top: 1px solid #CCC;
+	padding: 15px 0 20px 0;
+	margin-top: 20px;
+	font-size: 13px; 
+	line-height: 18px; 
+	letter-spacing: 1px;
+}
+
+.nav li a {
+	display: block;
+	height: 27px;
+	line-height: 27px;
+	padding-right: 25px;
+	margin: 0 0 12px 0;
+	text-align: right;
+	text-decoration: none;
+	color: #000;
+
+	font-size: 20px;
+	font-family: 'LucidaFaxDemibold';
+	text-align: right;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.nav li a:hover,
+.nav li a.selected {
+	background-color: #000;
+	color: #fff;
+	background-attachment: left;
+	background-repeat: no-repeat;
+}
+
+.nav li a.icon-menu:hover,
+.nav li a.icon-menu.selected {
+	background-image: url(../images/icon-menu.gif);
+}
+
+.nav li a.icon-phone:hover,
+.nav li a.icon-phone.selected {
+	background-image: url(../images/icon-phone.gif);
+}
+
+.nav li a.icon-pencil:hover,
+.nav li a.icon-pencil.selected {
+	background-image: url(../images/icon-pencil.gif);
+}
+
+.nav li a.icon-camera:hover,
+.nav li a.icon-camera.selected {
+	background-image: url(../images/icon-camera.gif);
+}
+
+p { margin-bottom: 1em; }
+.footer p { margin-bottom: 0;}
+
+a.pdf {
+	display: inline-block;
+	padding: 1px 25px 0 10px;
+	background: url(../images/icon-arrow.gif) top right no-repeat #000;
+	color: #FFF;
+	text-transform: uppercase; 
+	font-size: 10px;
+	font-family: 'LucidaFaxDemibold';
+	text-decoration: none;
+}
+
+h2, h3 {
+	font-size: 24px; margin-bottom: 10px; text-transform: uppercase; font-family: 'LucidaFaxDemibold';
+}
+
+h3 {
+	font-size: 14px; margin-bottom: 5px;
+}
