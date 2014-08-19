@@ -3,6 +3,8 @@ jQuery(document).ready(function($){
 		$(this).find("a[href='#" + $(this).attr('id') + "']").addClass('selected');
 	});
 
+	$('a[href$=pdf').addClass('pdf');
+
 	$(".menu a").click(function(e) {
 		e.preventDefault();
 		$('html, body').animate({
