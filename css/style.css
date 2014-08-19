@@ -55,8 +55,7 @@ body {
 }
 
 .content {
-	margin-top: 6px;
-	max-height: 430px;
+	max-height: 436px;
 	overflow: hidden;
 }
 
@@ -68,6 +67,10 @@ body {
 	font-size: 13px; 
 	line-height: 18px; 
 	letter-spacing: 1px;
+}
+
+.menu img {
+	padding-bottom: 6px;
 }
 
 .nav li a {
