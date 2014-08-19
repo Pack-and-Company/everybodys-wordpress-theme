@@ -15,7 +15,7 @@ function eb_get_nav_menu($menu_data) {
 	#print_r($menu_data);
 	$item_format = '    <li><a class="icon-%s" href="#%s">%s</a></li>';
 	foreach ( $menu_data as $menu_item ) {
-		printf($item_format, $menu_item->post_name, $menu_item->post_name, $menu_item->the_title);
+		printf($item_format, $menu_item->post_name, $menu_item->post_name, $menu_item->post_title);
 	}
 	echo '</ul>';
 }
