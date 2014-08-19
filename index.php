@@ -15,7 +15,9 @@ function eb_get_nav_menu($menu_data) {
 	#print_r($menu_data);
 	$item_format = '    <li><a class="icon-%s" href="#%s">%s</a></li>';
 	foreach ( $menu_data as $menu_item ) {
-		printf($item_format, $menu_item->post_name, $menu_item->post_name, $menu_item->post_title);
+		if ( $menu_item->post_name != "home" ) {
+			printf($item_format, $menu_item->post_name, $menu_item->post_name, $menu_item->post_title);
+		}
 	}
 	echo '</ul>';
 }
@@ -30,12 +32,6 @@ function eb_get_nav_menu($menu_data) {
 		<div class="container menu">
 			<a href="#home"><img src="<?=get_template_directory_uri();?>/images/logo.png"></a>
 			<?php eb_get_nav_menu($menu_data); ?>
-			<!-- <ul class="nav">
-				<li><a class="icon-menu" href="#menus">Menus</a></li>
-				<li><a class="icon-phone" href="#contact">Contact</a></li>
-				<li><a class="icon-pencil" href="#bookings">Bookings</a></li>
-				<li><a class="icon-camera" href="#gallery">Gallery</a></li>
-			</ul> -->
 		</div>
 		<div class="container main">
 			<div class="content">
