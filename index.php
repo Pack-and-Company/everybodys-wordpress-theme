@@ -7,7 +7,7 @@ $args = array(
     'post_status' => 'publish',
     'orderby'     => 'menu_order',
     'order'       => 'ASC',
-    'number'	  => 10,
+    'numberposts' => 10,
 );
 $menu_data = get_posts( $args );
 
