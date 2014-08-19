@@ -28,7 +28,7 @@ function eb_get_nav_menu($menu_data) {
 	<div class="wrapper">
 		<div class="container menu">
 			<a href="#home"><img src="<?=get_template_directory_uri();?>/images/logo.png"></a>
-			<?php echo eb_get_nav_menu(); ?>
+			<?php echo eb_get_nav_menu($menu_data); ?>
 			<!-- <ul class="nav">
 				<li><a class="icon-menu" href="#menus">Menus</a></li>
 				<li><a class="icon-phone" href="#contact">Contact</a></li>
