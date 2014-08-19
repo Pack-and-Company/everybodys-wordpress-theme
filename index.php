@@ -3,7 +3,7 @@
 <?php if ( have_posts() ): ?>
   <?php while ( have_posts() ) : the_post(); ?>
 
-<div id="home" class="page" style="background-image: url(<?=the_post_thumbnail();?>)">
+<div id="home" class="page" style="background-image: url(<?=wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>)">
 	<div class="wrapper">
 		<div class="container menu">
 			<a href="#home"><img src="images/logo.png"></a>
