@@ -21,9 +21,22 @@ function remove_gallery_css( $css ) {
 add_filter( 'gallery_style', 'remove_gallery_css' );
 
 function mytheme_customize_register( $wp_customize ) {
+
+	$wp_customize->add_section( 'eb_theme_settings' , array(
+	    'title'      => __( 'Theme Options', 'mytheme' ),
+	    'priority'   => 30,
+	) );
+
    $wp_customize->add_setting( 'header_textcolor' , array(
 	    'default'     => '#000000',
 	) );
+
+   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+		'label'      => __( 'Header Text Colour', 'mytheme' ),
+		'section'    => 'eb_theme_settings',
+		'settings'   => 'header_textcolor',
+	) ) );
+
 }
 add_action( 'customize_register', 'mytheme_customize_register' );
 
