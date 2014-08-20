@@ -15,6 +15,13 @@
   <link type="text/css" rel="stylesheet" media="all" href="<?=get_template_directory_uri();?>/css/style.css" />
   <link type="text/css" rel="stylesheet" media="all" href="<?=get_template_directory_uri();?>/css/prettyPhoto.css" />
 
+  <style type="text/css">
+    .nav li a:hover,
+    .nav li a.selected {
+      background-color: <?=get_theme_mod('nav_menu_highlight_colour', '#000000');?>;
+    }
+  </style>
+
   <script src="<?=get_template_directory_uri();?>/js/jquery-1.11.1.min.js"></script>
   <script src="<?=get_template_directory_uri();?>/js/jquery-ui.min.js"></script>
   <script src="<?=get_template_directory_uri();?>/js/jquery.prettyPhoto.js"></script>
