@@ -15,7 +15,7 @@
   <link type="text/css" rel="stylesheet" media="all" href="<?=get_template_directory_uri();?>/css/style.css" />
   <link type="text/css" rel="stylesheet" media="all" href="<?=get_template_directory_uri();?>/css/prettyPhoto.css" />
 
-  <script src="<?=get_template_directory_uri();?>/jquery-1.11.1.min.js"></script>
+  <script src="<?=get_template_directory_uri();?>/js/jquery-1.11.1.min.js"></script>
   <script src="<?=get_template_directory_uri();?>/js/jquery-ui.min.js"></script>
   <script src="<?=get_template_directory_uri();?>/js/jquery.prettyPhoto.js"></script>
 
