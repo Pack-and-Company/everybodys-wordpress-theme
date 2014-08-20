@@ -27,32 +27,68 @@ function mytheme_customize_register( $wp_customize ) {
 	    'priority'   => 30,
 	) );
 
-   $wp_customize->add_setting( 'nav_menu_highlight_colour' , array(
+  $wp_customize->add_section( 'eb_footer_text' , array(
+      'title'      => __( 'Footer Content', 'mytheme' ),
+      'priority'   => 30,
+  ) );
+
+  $wp_customize->add_setting( 'nav_menu_highlight_colour' , array(
 	    'default'     => '#000000',
 	) );
 
 
-   $wp_customize->add_setting( 'theme_logo' , array(
+  $wp_customize->add_setting( 'theme_logo' , array(
 	    'default'     => get_template_directory_uri() . '/images/263x162.gif',
 	) );
 
-   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+  $wp_customize->add_setting( 'eb_phone_number' , array(
+      'default'     => '',
+  ) );
+
+  $wp_customize->add_setting( 'eb_address' , array(
+      'default'     => '',
+  ) );
+
+  $wp_customize->add_setting( 'eb_email_address' , array(
+      'default'     => '',
+  ) );
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
 		'label'      => __( 'Menu Highlight Colour', 'mytheme' ),
 		'section'    => 'eb_theme_settings',
 		'settings'   => 'nav_menu_highlight_colour',
 	) ) );
 
-   $wp_customize->add_control(
-       new WP_Customize_Image_Control(
-           $wp_customize,
-           'logo',
-           array(
-               'label'      => __( 'Upload a logo', 'theme_name' ),
-               'section'    => 'eb_theme_settings',
-               'settings'   => 'theme_logo',
-           )
-       )
-   );
+  $wp_customize->add_control(
+     new WP_Customize_Image_Control(
+         $wp_customize,
+         'logo',
+         array(
+             'label'      => __( 'Upload a logo', 'theme_name' ),
+             'section'    => 'eb_theme_settings',
+             'settings'   => 'theme_logo',
+         )
+     )
+  );
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+    'label'      => __( 'Phone Number', 'mytheme' ),
+    'section'    => 'eb_footer_text',
+    'settings'   => 'eb_phone_number',
+  ) ) );
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+    'label'      => __( 'Address', 'mytheme' ),
+    'section'    => 'eb_footer_text',
+    'settings'   => 'eb_address',
+  ) ) );
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+    'label'      => __( 'Email Address', 'mytheme' ),
+    'section'    => 'eb_footer_text',
+    'settings'   => 'eb_email_address',
+  ) ) );
+
 
 }
 add_action( 'customize_register', 'mytheme_customize_register' );

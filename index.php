@@ -40,8 +40,8 @@ function eb_get_nav_menu($menu_data) {
 				<?php the_content(); ?>
 			</div>
 			<div class="footer">
-				<p>7 Fort Lane or 44 Queen St, Auckland - Lunch &amp; dinner till late.<br />
-		        <strong>Phone:</strong> 09 929 2702 or <strong>Email: </strong><a href="mailto:info@everybodys.co.nz">info@everybodys.co.nz</a><br />
+				<p><?=get_theme_mod('eb_address');?><br />
+		        <strong>Phone:</strong> <?=get_theme_mod('eb_phone');?> or <strong>Email: </strong><a href="mailto:<?=get_theme_mod('eb_email_address');?>"><?=get_theme_mod('eb_email_address');?></a><br />
 		        &copy; 2014 Everybody's</p>
 			</div>
 		</div>
