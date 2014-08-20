@@ -33,7 +33,7 @@ function mytheme_customize_register( $wp_customize ) {
 
 
    $wp_customize->add_setting( 'theme_logo' , array(
-	    'default'     => get_template_directory_uri() . '/images/logo.png',
+	    'default'     => '',
 	) );
 
    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
