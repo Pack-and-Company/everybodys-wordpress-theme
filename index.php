@@ -31,7 +31,7 @@ function eb_get_nav_menu($menu_data) {
 <div id="<?=$post->post_name;?>" class="page" style="background-image: url(<?=wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>)">
 	<div class="wrapper">
 		<div class="container menu">
-			<a href="#home"><img src="<?=get_template_directory_uri();?>/images/logo.png"></a>
+			<a href="#home"><img src="<?=get_theme_mod('theme_logo');?>"></a>
 			<?php eb_get_nav_menu($menu_data); ?>
 		</div>
 		<div class="container main">
