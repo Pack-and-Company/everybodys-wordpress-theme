@@ -14,4 +14,14 @@ jQuery(document).ready(function($){
 	        scrollTop: $( $(this).attr('href') ).offset().top
 	    }, 1000, 'easeInOutQuart');
 	});
+
+	// Pagination for image gallery
+	$('.gallery-pager a').click(function(e){
+		e.preventDefault();
+		var page = $(this).html() - 1;
+		var first = (page * 6) + 1;
+		var last = ((page * 6) + 7);
+		$('.gallery-item').fadeOut(500);
+		$('.gallery-item:nth-of-type(n+' + first + '):nth-of-type(-n+' + last + ')').fadeIn(500);
+	});
 });

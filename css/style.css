@@ -160,3 +160,41 @@ a.pdf {
 	font-family: 'LucidaFaxDemibold';
 	text-decoration: none;
 }
+
+.gallery {
+	height: 310px;
+	overflow: hidden;
+}
+
+.gallery dd,
+.gallery br {
+	display: none;
+	height: 0;
+}
+
+.gallery dl {
+	float: left;
+	margin: 0 25px 25px 0;
+	width: 190px;
+	height: 130px;
+	text-align: center;
+}
+
+.gallery dl:nth-of-type(3n) {
+	margin-right: 0;
+}
+
+ul.gallery-pager {
+	display: block;
+	text-align: center;
+	overflow: auto;
+}
+
+.gallery-pager li {
+	display: inline-block;
+	margin: 0 15px;
+}
+
+.gallery-item.hide {
+	display: none;
+}
