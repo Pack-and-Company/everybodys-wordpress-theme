@@ -15,6 +15,21 @@ jQuery(document).ready(function($){
 	    }, 1000, 'easeInOutQuart');
 	});
 
+	// Initialize prettyPhoto
+	$('.gallery a').attr('rel', 'prettyPhoto[mixed]');
+	$("a[rel^='prettyPhoto']").prettyPhoto();
+	$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({
+		animation_speed:'normal',
+		slideshow:8000,
+		social_tools:false,
+		autoplay_slideshow: false,
+		overlay_gallery:false,
+		show_title: true,
+		allow_resize: true,
+		default_width: 320,
+		wmode: 'opaque'
+	});
+
 	// Draw gallery pagination links
 	$('.gallery').after(function(){
 		var pages = Math.floor($(this).find('dt').length / 6) + 1;
