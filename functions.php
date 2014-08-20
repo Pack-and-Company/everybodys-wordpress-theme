@@ -20,4 +20,11 @@ function remove_gallery_css( $css ) {
 }
 add_filter( 'gallery_style', 'remove_gallery_css' );
 
+function mytheme_customize_register( $wp_customize ) {
+   $wp_customize->add_setting( 'header_textcolor' , array(
+	    'default'     => '#000000',
+	) );
+}
+add_action( 'customize_register', 'mytheme_customize_register' );
+
 ?>
