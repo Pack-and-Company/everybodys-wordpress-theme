@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
 	});
 
 	// Add pdf class to links to pdf files
-	$('a[href$=pdf').addClass('pdf');
+	$('a[href$=pdf]').addClass('pdf');
 
 	// Override anchor links to animate scrolling
 	$(".menu a").click(function(e) {
