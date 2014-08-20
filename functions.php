@@ -27,15 +27,32 @@ function mytheme_customize_register( $wp_customize ) {
 	    'priority'   => 30,
 	) );
 
-   $wp_customize->add_setting( 'header_textcolor' , array(
+   $wp_customize->add_setting( 'nav_menu_highlight_colour' , array(
 	    'default'     => '#000000',
 	) );
 
+
+   $wp_customize->add_setting( 'theme_logo' , array(
+	    'default'     => get_template_directory_uri() . '/images/logo.png',
+	) );
+
    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
-		'label'      => __( 'Header Text Colour', 'mytheme' ),
+		'label'      => __( 'Menu Highlight Colour', 'mytheme' ),
 		'section'    => 'eb_theme_settings',
-		'settings'   => 'header_textcolor',
+		'settings'   => 'nav_menu_highlight_colour',
 	) ) );
+
+   $wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'logo',
+           array(
+               'label'      => __( 'Upload a logo', 'theme_name' ),
+               'section'    => 'eb_theme_settings',
+               'settings'   => 'theme_logo',
+           )
+       )
+   );
 
 }
 add_action( 'customize_register', 'mytheme_customize_register' );
