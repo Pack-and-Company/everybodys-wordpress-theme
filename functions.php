@@ -33,7 +33,7 @@ function mytheme_customize_register( $wp_customize ) {
 
 
    $wp_customize->add_setting( 'theme_logo' , array(
-	    'default'     => 'http://placehold.it/263x162',
+	    'default'     => get_template_directory_uri() . '/images/263x162.gif',
 	) );
 
    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(

@@ -31,7 +31,7 @@ function eb_get_nav_menu($menu_data) {
 <div id="<?=$post->post_name;?>" class="page" style="background-image: url(<?=wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>)">
 	<div class="wrapper">
 		<div class="container menu">
-			<a href="#home"><img src="<?=get_theme_mod('theme_logo', 'http://placehold.it/263x162');?>"></a>
+			<a href="#home"><img src="<?=get_theme_mod('theme_logo', get_template_directory_uri() . '/images/263x162.gif');?>"></a>
 			<?php eb_get_nav_menu($menu_data); ?>
 		</div>
 		<div class="container main">
