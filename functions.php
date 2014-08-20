@@ -71,19 +71,19 @@ function mytheme_customize_register( $wp_customize ) {
      )
   );
 
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'eb_phone_number', array(
     'label'      => __( 'Phone Number', 'mytheme' ),
     'section'    => 'eb_footer_text',
     'settings'   => 'eb_phone_number',
   ) ) );
 
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'eb_address', array(
     'label'      => __( 'Address', 'mytheme' ),
     'section'    => 'eb_footer_text',
     'settings'   => 'eb_address',
   ) ) );
 
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'eb_email_address', array(
     'label'      => __( 'Email Address', 'mytheme' ),
     'section'    => 'eb_footer_text',
     'settings'   => 'eb_email_address',
