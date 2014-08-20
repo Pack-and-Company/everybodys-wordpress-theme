@@ -15,6 +15,17 @@ jQuery(document).ready(function($){
 	    }, 1000, 'easeInOutQuart');
 	});
 
+	// Draw gallery pagination links
+	$('.gallery').after(function(){
+		var pages = Math.floor($(this).find('dt').length / 6) + 1;
+		var output = '<ul class="gallery-pager">';
+		for (i=1; i<=pages; i++) {
+			output = output + '<li><a href="#">' + i + '</a></li>';
+		}
+		output = output + "</ul>";
+		return output;
+	});
+
 	// Pagination for image gallery
 	$('.gallery-pager a').click(function(e){
 		e.preventDefault();
