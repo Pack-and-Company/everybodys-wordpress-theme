@@ -74,7 +74,7 @@ function eb_get_nav_menu($menu_data) {
 										get_the_post_thumbnail($event->ID, 'full'),
 										$event->post_content,
 										get_the_post_thumbnail($event->ID, array(190,269)),
-										$event->post_title,
+										$event->post_title
 									);
 									printf(
 										'<dd class="event-info"><strong>%s</strong><br>%s, %s, %s<br><p>%s</p></dd>',
