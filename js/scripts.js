@@ -42,8 +42,10 @@ jQuery(document).ready(function($){
 		$(target).after(function(){
 			var pages = Math.floor(($(this).find('dt').length - 1) / num_per_page) + 1;
 			var output = '<ul class="gallery-pager">';
-			for (i=1; i<=pages; i++) {
-				output = output + '<li><a href="#" data-target="' + target + '" data-size="' + num_per_page + '">' + i + '</a></li>';
+			if (pages > 1) {
+				for (i=1; i<=pages; i++) {
+					output = output + '<li><a href="#" data-target="' + target + '" data-size="' + num_per_page + '">' + i + '</a></li>';
+				}
 			}
 			output = output + "</ul>";
 			return output;
