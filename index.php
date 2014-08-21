@@ -41,7 +41,7 @@ function eb_get_nav_menu($menu_data) {
 				<?php
 					foreach ( get_the_tags() as $tag ) {
 						if ( $tag->name == 'events' ) {
-							echo "Events go here!"
+							echo "Events go here!";
 						}
 					}
 				?>
