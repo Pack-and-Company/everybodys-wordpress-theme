@@ -29,8 +29,10 @@ function mytheme_customize_register( $wp_customize ) {
 
   $wp_customize->add_section( 'eb_footer_text' , array(
       'title'      => __( 'Footer Content', 'mytheme' ),
-      'priority'   => 30,
+      'priority'   => 20,
   ) );
+
+
 
   $wp_customize->add_setting( 'nav_menu_highlight_colour' , array(
 	    'default'     => '#000000',
@@ -56,6 +58,9 @@ function mytheme_customize_register( $wp_customize ) {
       'default'     => '',
   ) );
 
+
+
+
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
 		'label'      => __( 'Menu Highlight Colour', 'mytheme' ),
 		'section'    => 'eb_theme_settings',
@@ -74,22 +79,7 @@ function mytheme_customize_register( $wp_customize ) {
      )
   );
 
-  $wp_customize->add_control(
-    new WP_Customize_Control(
-      $wp_customize,
-      'eb_header_font',
-      array(
-        'label'      => __( 'Heading Font', 'mytheme' ),
-        'section'    => 'eb_theme_settings',
-        'settings'   => 'eb_header_font',
-        'type'       => 'select',
-        'choices'    => array(
-          'LucidaFaxDemibold' => __( 'Lucida Fax Demibold' ),
-          'Pintor'            => __( 'Pintor' )
-        )
-      )
-    )
-  );
+
 
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'eb_phone_number', array(
     'label'      => __( 'Phone Number', 'mytheme' ),
