@@ -53,7 +53,6 @@ jQuery(document).ready(function($){
 	draw_pager('.gallery', 6);
 	draw_pager('.events-list', 3);
 
-
 	// Gallery pagination
 	$('.gallery-pager a').click(function(e){
 		e.preventDefault();
