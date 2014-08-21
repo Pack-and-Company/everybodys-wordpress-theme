@@ -6,6 +6,7 @@
          url('../fonts/ubahn-light-webfont.ttf') format('truetype'),
          url('../fonts/ubahn-light-webfont.svg#UbahnLightRegular') format('svg');
 }
+
 @font-face {
     font-family: 'LucidaFaxDemibold';
     src: url('../fonts/lucidafax-demi-webfont.eot');
@@ -13,6 +14,15 @@
          url('../fonts/lucidafax-demi-webfont.woff') format('woff'),
          url('../fonts/lucidafax-demi-webfont.ttf') format('truetype'),
          url('../fonts/lucidafax-demi-webfont.svg#LucidaFaxDemibold') format('svg');
+}
+
+@font-face {
+    font-family: 'Pintor';
+    src: url('../fonts/Pintor.eot');
+    src: url('../fonts/Pintor.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Pintor.woff') format('woff'),
+         url('../fonts/Pintor.ttf') format('truetype'),
+         url('../fonts/Pintor.svg#Pintor') format('svg');
 }
 
 body {
@@ -84,7 +94,6 @@ body {
 	color: #000;
 
 	font-size: 20px;
-	font-family: 'LucidaFaxDemibold';
 	text-align: right;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -123,7 +132,9 @@ p { margin-bottom: 1em; }
 
 
 h2, h3 {
-	font-size: 24px; margin-bottom: 10px; text-transform: uppercase; font-family: 'LucidaFaxDemibold';
+	font-size: 24px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
 }
 
 h3 {
@@ -157,7 +168,6 @@ a.pdf {
 	color: #FFF;
 	text-transform: uppercase; 
 	font-size: 10px;
-	font-family: 'LucidaFaxDemibold';
 	text-decoration: none;
 }
 

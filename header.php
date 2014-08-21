@@ -20,6 +20,13 @@
     .nav li a.selected {
       background-color: <?=get_theme_mod('nav_menu_highlight_colour', '#000000');?>;
     }
+
+    .nav li a,
+    h2, h3,
+    a.pdf {
+      font-family: <?=get_theme_mod('eb_heading_font', 'LucidaFaxDemibold');?>;
+    }
+
   </style>
 
   <script src="<?=get_template_directory_uri();?>/js/jquery-1.11.1.min.js"></script>
