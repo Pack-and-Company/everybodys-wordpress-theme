@@ -87,7 +87,7 @@ function mytheme_customize_register( $wp_customize ) {
               'label'          => __( 'Heading Font', 'theme_name' ),
               'section'        => 'eb_theme_settings',
               'settings'       => 'eb_heading_font',
-              'type'           => 'radio',
+              'type'           => 'select',
               'choices'        => array(
                   'LucidaFaxDemibold'   => __( 'LucidaFaxDemibold' ),
                   'Pintor'              => __( 'Pintor' )
