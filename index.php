@@ -39,7 +39,7 @@ function eb_get_nav_menu($menu_data) {
 				<h2><?php the_title(); ?></h2>
 				<?php the_content(); ?>
 				<?php
-					print_r( wp_get_post_tags( $post_id, $args ) );
+					print_r( get_the_tags() );
 				?>
 			</div>
 			<div class="footer">
