@@ -2,7 +2,6 @@
     font-family: 'UbahnLightRegular';
     src: url('../fonts/ubahn-light-webfont.eot');
     src: url('../fonts/ubahn-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ubahn-light-webfont.woff') format('woff'),
          url('../fonts/ubahn-light-webfont.ttf') format('truetype'),
          url('../fonts/ubahn-light-webfont.svg#UbahnLightRegular') format('svg');
 }
