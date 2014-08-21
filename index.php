@@ -41,7 +41,54 @@ function eb_get_nav_menu($menu_data) {
 				<?php
 					foreach ( get_the_tags() as $tag ) {
 						if ( $tag->name == 'events' ) {
-							echo "Events go here!";
+							?>
+							<div class="events-list">
+								<?php
+
+				                $args = array(
+				                    'post_type'   => 'events',
+				                    'post_status' => 'publish',
+				                    'orderby'     => 'menu_order',
+				                    'order'       => 'ASC',
+				                );
+				                $events = get_posts( $args );
+
+				                foreach ( $events as $event ) {
+				                    $event_time = get_post_meta($event->ID, '_event_time', true);
+				                    if ( $event_time != '' ){
+				                        $event_time = ", " . $event_time;
+				                    }
+
+				                    $door_charge = get_post_meta($event->ID, '_event_price', true);
+				                    if ( $door_charge != '' ) {
+				                        if ( substr($door_charge, 0, 1) != "$" ) {
+				                            $door_charge = "$" . $door_charge;
+				                        }
+				                        $door_charge = ", " . $door_charge;
+				                    }
+
+				                    setup_postdata($event);
+			                        printf('<dl class="event-item">');
+									printf(
+										'<dt class="event-image"><a href="%s" title="%s"><img src="%s" width="190" height="269" alt="%s"></a></dt>',
+										get_the_post_thumbnail($event->ID, 'full'),
+										$event->post_content,
+										get_the_post_thumbnail($event->ID, array(190,269)),
+										$event->post_title,
+									);
+									printf(
+										'<dd class="event-info"><strong>%s</strong><br>%s, %s, %s<br><p>%s</p></dd>',
+										$event->post_title,
+										$event_time,
+										$door_charge,
+										$event->post_content
+									);
+			                        printf('</dl>');
+				                }
+				                #wp_reset_postdata();
+				                ?>
+							</div>
+							<?php
 						}
 					}
 				?>
