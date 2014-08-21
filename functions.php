@@ -29,7 +29,7 @@ function mytheme_customize_register( $wp_customize ) {
 
   $wp_customize->add_section( 'eb_footer_text' , array(
       'title'      => __( 'Footer Content', 'mytheme' ),
-      'priority'   => 20,
+      'priority'   => 35,
   ) );
 
 
@@ -79,7 +79,22 @@ function mytheme_customize_register( $wp_customize ) {
      )
   );
 
-
+  $wp_customize->add_control(
+      new WP_Customize_Control(
+          $wp_customize,
+          'eb_heading_font',
+          array(
+              'label'          => __( 'Heading Font', 'theme_name' ),
+              'section'        => 'eb_theme_settings',
+              'settings'       => 'eb_heading_font',
+              'type'           => 'radio',
+              'choices'        => array(
+                  'LucidaFaxDemibold'   => __( 'LucidaFaxDemibold' ),
+                  'Pintor'              => __( 'Pintor' )
+              )
+          )
+      )
+  );
 
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'eb_phone_number', array(
     'label'      => __( 'Phone Number', 'mytheme' ),
