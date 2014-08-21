@@ -38,6 +38,9 @@ function eb_get_nav_menu($menu_data) {
 			<div class="content">
 				<h2><?php the_title(); ?></h2>
 				<?php the_content(); ?>
+				<?php
+					print_r( wp_get_post_tags( $post_id, $args ) );
+				?>
 			</div>
 			<div class="footer">
 				<p><?=get_theme_mod('eb_address');?><br />
