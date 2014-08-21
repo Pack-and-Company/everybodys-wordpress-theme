@@ -2,6 +2,7 @@
     font-family: 'UbahnLightRegular';
     src: url('../fonts/ubahn-light-webfont.eot');
     src: url('../fonts/ubahn-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ubahn-light-webfont.woff') format('woff'),
          url('../fonts/ubahn-light-webfont.ttf') format('truetype'),
          url('../fonts/ubahn-light-webfont.svg#UbahnLightRegular') format('svg');
 }
@@ -19,7 +20,6 @@
     font-family: 'Pintor';
     src: url('../fonts/Pintor.eot');
     src: url('../fonts/Pintor.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Pintor.woff') format('woff'),
          url('../fonts/Pintor.ttf') format('truetype'),
          url('../fonts/Pintor.svg#Pintor') format('svg');
 }
