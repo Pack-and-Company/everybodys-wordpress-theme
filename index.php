@@ -39,7 +39,11 @@ function eb_get_nav_menu($menu_data) {
 				<h2><?php the_title(); ?></h2>
 				<?php the_content(); ?>
 				<?php
-					print_r( get_the_tags() );
+					foreach ( get_the_tags() as $tag ) {
+						if ( $tag->name == 'events' ) {
+							echo "Events go here!"
+						}
+					}
 				?>
 			</div>
 			<div class="footer">
