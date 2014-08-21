@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
 	// Generic function to draw pagination links
 	function draw_pager(target, num_per_page) {		
 		$(target).after(function(){
-			var pages = Math.floor($(this).find('dt').length / num_per_page) + 1;
+			var pages = Math.floor($(this).find('dt').length - 1 / num_per_page) + 1;
 			var output = '<ul class="gallery-pager">';
 			for (i=1; i<=pages; i++) {
 				output = output + '<li><a href="#" data-target="' + target + '" data-size="' + num_per_page + '">' + i + '</a></li>';
