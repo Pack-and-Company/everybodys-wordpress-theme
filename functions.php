@@ -84,8 +84,8 @@ function mytheme_customize_register( $wp_customize ) {
         'settings'   => 'eb_header_font',
         'type'       => 'select',
         'choices'    => array(
-          'Lucida Fax Demibold' => 'LucidaFaxDemibold',
-          'Pintor'              => 'Pintor',
+          'LucidaFaxDemibold' => __( 'Lucida Fax Demibold' ),
+          'Pintor'            => __( 'Pintor' )
         )
       )
     )
