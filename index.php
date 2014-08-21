@@ -67,13 +67,15 @@ function eb_get_nav_menu($menu_data) {
 				                        $door_charge = ", " . $door_charge;
 				                    }
 
+
+
 				                    setup_postdata($event);
 			                        printf('<dl class="event-item">');
 									printf(
 										'<dt class="event-image"><a href="%s" title="%s"><img src="%s" width="190" height="269" alt="%s"></a></dt>',
-										get_the_post_thumbnail($event->ID, 'full'),
+										wp_get_attachment_url(get_post_thumbnail_id($event->ID)),
 										$event->post_content,
-										get_the_post_thumbnail($event->ID, array(190,269)),
+										wp_get_attachment_url(get_post_thumbnail_id($event->ID)),
 										$event->post_title
 									);
 									printf(
