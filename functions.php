@@ -74,16 +74,22 @@ function mytheme_customize_register( $wp_customize ) {
      )
   );
 
-  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'eb_header_font', array(
-    'label'      => __( 'Email Address', 'mytheme' ),
-    'section'    => 'eb_theme_settings',
-    'settings'   => 'eb_header_font',
-    'type'       => 'select',
-    'choices'    => array(
-        'Lucida Fax Demibold' => 'LucidaFaxDemibold',
-        'Pintor'              => 'Pintor',
-      ),
-  ) ) );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      'eb_header_font',
+      array(
+        'label'      => __( 'Heading Font', 'mytheme' ),
+        'section'    => 'eb_theme_settings',
+        'settings'   => 'eb_header_font',
+        'type'       => 'select',
+        'choices'    => array(
+          'Lucida Fax Demibold' => 'LucidaFaxDemibold',
+          'Pintor'              => 'Pintor',
+        )
+      )
+    )
+  );
 
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'eb_phone_number', array(
     'label'      => __( 'Phone Number', 'mytheme' ),
