@@ -15,39 +15,54 @@ jQuery(document).ready(function($){
 	    }, 1000, 'easeInOutQuart');
 	});
 
-	// Initialize prettyPhoto
-	$('.gallery a').attr('rel', 'prettyPhoto[mixed]');
-	$("a[rel^='prettyPhoto']").prettyPhoto();
-	$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({
-		animation_speed:'normal',
-		slideshow:8000,
-		social_tools:false,
-		autoplay_slideshow: false,
-		overlay_gallery:false,
-		show_title: true,
-		allow_resize: true,
-		default_width: 320,
-		wmode: 'opaque'
-	});
+	// Generic function to initialize prettyPhoto
+	function init_prettyPhoto(target) {
+		var gallery_name = 'prettyPhoto[' + target + ']';
 
-	// Draw gallery pagination links
-	$('.gallery').after(function(){
-		var pages = Math.floor($(this).find('dt').length / 6) + 1;
-		var output = '<ul class="gallery-pager">';
-		for (i=1; i<=pages; i++) {
-			output = output + '<li><a href="#">' + i + '</a></li>';
-		}
-		output = output + "</ul>";
-		return output;
-	});
+		$(target + ' a').attr('rel', gallery_name);
+		$("a[rel^='" + gallery_name + "']").prettyPhoto();
+		$(target + ":first a[rel^='" + gallery_name + "']").prettyPhoto({
+			animation_speed:'normal',
+			slideshow:8000,
+			social_tools:false,
+			autoplay_slideshow: false,
+			overlay_gallery:false,
+			show_title: true,
+			allow_resize: true,
+			default_width: 320,
+			wmode: 'opaque'
+		});
+	}
 
-	// Pagination for image gallery
+	init_prettyPhoto('.gallery');
+	init_prettyPhoto('.events-list');
+
+	// Generic function to draw pagination links
+	function draw_pager(target, num_per_page) {		
+		$(target).after(function(){
+			var pages = Math.floor($(this).find('dt').length / num_per_page) + 1;
+			var output = '<ul class="gallery-pager">';
+			for (i=1; i<=pages; i++) {
+				output = output + '<li><a href="#" data-target="' + target + '" data-size="' + num_per_page + '">' + i + '</a></li>';
+			}
+			output = output + "</ul>";
+			return output;
+		});
+	}
+
+	draw_pager('.gallery', 6);
+	draw_pager('.events-list', 3);
+
+
+	// Gallery pagination
 	$('.gallery-pager a').click(function(e){
 		e.preventDefault();
 		var page = $(this).html() - 1;
-		var first = (page * 6) + 1;
-		var last = ((page * 6) + 7);
-		$('.gallery-item').fadeOut(500);
-		$('.gallery-item:nth-of-type(n+' + first + '):nth-of-type(-n+' + last + ')').fadeIn(500);
+		var per_page = $(this).attr('data-size');
+		var target = $(this).attr('data-target') + ' dl';
+		var first = (page * per_page) + 1;
+		var last = ((page * per_page) + (per_page + 1));
+		$(target).fadeOut(500);
+		$(target + ':nth-of-type(n+' + first + '):nth-of-type(-n+' + last + ')').fadeIn(500);
 	});
 });
