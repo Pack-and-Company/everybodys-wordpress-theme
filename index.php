@@ -56,8 +56,8 @@ function eb_get_nav_menu($menu_data) {
 					                $events = get_posts( $args );
 
 					                foreach ( $events as $event ) {
-
 					                    setup_postdata($event);
+
 				                        printf('<dl class="event-item">');
 										printf(
 											'<dt class="event-image"><a href="%s" title="%s"><img src="%s" width="190" height="269" alt="%s"></a></dt>',
@@ -67,18 +67,17 @@ function eb_get_nav_menu($menu_data) {
 											$event->post_title
 										);
 										printf(
-											'<dd class="event-info"><strong>%s</strong><br>%s<br><p>%s</p></dd>',
+											'<dd class="event-info"><strong>%s</strong><br>%s</dd>',
 											$event->post_title,
 											implode(', ', array(
 															  get_post_meta($event->ID, '_event_date', true), 
 															  get_post_meta($event->ID, '_event_time', true), 
 															  get_post_meta($event->ID, '_event_price', true)
-														 )),
-											$event->post_content
+														 ))
 										);
 				                        printf('</dl>');
 					                }
-					                #wp_reset_postdata();
+					                wp_reset_postdata();
 					                ?>
 								</div>
 								<?php
