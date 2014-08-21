@@ -22,6 +22,8 @@ add_filter( 'gallery_style', 'remove_gallery_css' );
 
 function mytheme_customize_register( $wp_customize ) {
 
+  # Sections
+
 	$wp_customize->add_section( 'eb_theme_settings' , array(
 	    'title'      => __( 'Theme Options', 'mytheme' ),
 	    'priority'   => 30,
@@ -33,6 +35,7 @@ function mytheme_customize_register( $wp_customize ) {
   ) );
 
 
+  # Settings
 
   $wp_customize->add_setting( 'nav_menu_highlight_colour' , array(
 	    'default'     => '#000000',
@@ -58,8 +61,7 @@ function mytheme_customize_register( $wp_customize ) {
       'default'     => '',
   ) );
 
-
-
+  # Controls
 
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
 		'label'      => __( 'Menu Highlight Colour', 'mytheme' ),
@@ -113,7 +115,6 @@ function mytheme_customize_register( $wp_customize ) {
     'section'    => 'eb_footer_text',
     'settings'   => 'eb_email_address',
   ) ) );
-
 
 }
 add_action( 'customize_register', 'mytheme_customize_register' );
