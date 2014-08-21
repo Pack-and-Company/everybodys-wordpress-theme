@@ -66,9 +66,11 @@ function eb_get_nav_menu($menu_data) {
 											wp_get_attachment_url(get_post_thumbnail_id($event->ID)),
 											$event->post_title
 										);
-										$event_details = [get_post_meta($event->ID, '_event_date', true), 
+										$event_details = array(
+														  get_post_meta($event->ID, '_event_date', true), 
 														  get_post_meta($event->ID, '_event_time', true), 
-														  get_post_meta($event->ID, '_event_price', true)].join(', ');
+														  get_post_meta($event->ID, '_event_price', true)
+														 ).join(', ');
 										printf(
 											'<dd class="event-info"><strong>%s</strong><br>%s<br><p>%s</p></dd>',
 											$event->post_title,
