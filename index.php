@@ -89,7 +89,7 @@ function eb_get_nav_menu($menu_data) {
 			<div class="footer">
 				<p><?=get_theme_mod('eb_address');?><br />
 		        <strong>Phone:</strong> <?=get_theme_mod('eb_phone');?> or <strong>Email: </strong><a href="mailto:<?=get_theme_mod('eb_email_address');?>"><?=get_theme_mod('eb_email_address');?></a><br />
-		        &copy; 2014 <?=bloginfo( 'name' );?></p>
+		        &copy; <?=date(Y);?> <?=bloginfo( 'name' );?></p>
 			</div>
 		</div>
 	</div>
