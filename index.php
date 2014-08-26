@@ -10,7 +10,7 @@ $args = array(
     'numberposts' => 10,
 );
 if ( is_user_logged_in() ) {
-	$args['post_status'] => array( 'pending', 'draft', 'future' );
+	$args['post_status'] = array( 'pending', 'draft', 'future' );
 }
 $menu_data = get_posts( $args );
 
