@@ -9,6 +9,9 @@ $args = array(
     'order'       => 'ASC',
     'numberposts' => 10,
 );
+if ( is_user_logged_in() ) {
+	$args['post_status'] => array( 'pending', 'draft', 'future' );
+}
 $menu_data = get_posts( $args );
 
 function eb_get_nav_menu($menu_data) {
