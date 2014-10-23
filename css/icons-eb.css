@@ -1,3 +1,4 @@
+.nav li a.icon-menus:hover,
 .nav li a.icon-menus.selected {
     background-image: url(../images/icons-eb/icon-menu.gif);
 }
