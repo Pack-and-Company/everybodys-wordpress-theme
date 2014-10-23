@@ -1,0 +1,29 @@
+.nav li a.icon-menus:hover,
+.nav li a.icon-menus.selected {
+    background-image: url(../images/icons-macs/icon-menu.png);
+}
+
+.nav li a.icon-bookings:hover,
+.nav li a.icon-bookings.selected {
+    background-image: url(../images/icons-macs/icon-book.png);
+}
+
+.nav li a.icon-whats-on:hover,
+.nav li a.icon-whats-on.selected {
+    background-image: url(../images/icons-macs/icon-question-mark.png);
+}
+
+.nav li a.icon-loyalty:hover,
+.nav li a.icon-loyalty.selected {
+    background-image: url(../images/icons-macs/icon-shield.png);
+}
+
+.nav li a.icon-gallery:hover,
+.nav li a.icon-gallery.selected {
+    background-image: url(../images/icons-macs/icon-camera.png);
+}
+
+.nav li a.icon-contact:hover,
+.nav li a.icon-contact.selected {
+    background-image: url(../images/icons-macs/icon-phone.png);
+}
