@@ -1,0 +1,18 @@
+.nav li a.icon-menus.selected {
+    background-image: url(../images/icons-eb/icon-menu.gif);
+}
+
+.nav li a.icon-contact:hover,
+.nav li a.icon-contact.selected {
+    background-image: url(../images/icons-eb/icon-phone.gif);
+}
+
+.nav li a.icon-bookings:hover,
+.nav li a.icon-bookings.selected {
+    background-image: url(../images/icons-eb/icon-pencil.gif);
+}
+
+.nav li a.icon-gallery:hover,
+.nav li a.icon-gallery.selected {
+    background-image: url(../images/icons-eb/icon-camera.gif);
+}

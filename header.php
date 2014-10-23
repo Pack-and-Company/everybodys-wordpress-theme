@@ -13,6 +13,7 @@
 
   <link type="text/css" rel="stylesheet" media="all" href="<?=get_template_directory_uri();?>/css/reset.css" />
   <link type="text/css" rel="stylesheet" media="all" href="<?=get_template_directory_uri();?>/css/style.css" />
+  <link type="text/css" rel="stylesheet" media="all" href="<?=get_template_directory_uri();?>/css/<?=get_theme_mod('eb_menu_icons', 'icons-eb.css');?>" />
   <link type="text/css" rel="stylesheet" media="all" href="<?=get_template_directory_uri();?>/css/prettyPhoto.css" />
 
   <style type="text/css">

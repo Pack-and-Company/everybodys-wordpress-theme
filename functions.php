@@ -52,6 +52,10 @@ function mytheme_customize_register( $wp_customize ) {
       'default'     => 'LucidaFaxDemibold',
   ) );
 
+  $wp_customize->add_setting( 'eb_menu_icons' , array(
+      'default'     => 'icons-eb.css',
+  ) );
+
   $wp_customize->add_setting( 'eb_phone_number' , array(
       'default'     => '',
   ) );
@@ -96,6 +100,23 @@ function mytheme_customize_register( $wp_customize ) {
               'choices'        => array(
                   'LucidaFaxDemibold'   => __( 'LucidaFaxDemibold' ),
                   'Pintor'              => __( 'Pintor' )
+              )
+          )
+      )
+  );
+
+  $wp_customize->add_control(
+      new WP_Customize_Control(
+          $wp_customize,
+          'eb_menu_icons',
+          array(
+              'label'          => __( 'Menu Icons', 'theme_name' ),
+              'section'        => 'eb_theme_settings',
+              'settings'       => 'eb_menu_icons',
+              'type'           => 'select',
+              'choices'        => array(
+                  'icons-eb.css'         => __( 'Everybodys' ),
+                  'icons-macs.css'       => __( 'Macs' )
               )
           )
       )
