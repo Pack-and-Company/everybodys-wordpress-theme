@@ -1,5 +1,5 @@
 # Allow cross domain requests for fonts
 # so eveve can load them
-<FilesMatch ".(eot|svg|ttf|otf|woff)">
-    Header set Access-Control-Allow-Origin "*"
-</FilesMatch>
+#<FilesMatch ".(eot|svg|ttf|otf|woff)">
+#    Header set Access-Control-Allow-Origin "*"
+#</FilesMatch>
