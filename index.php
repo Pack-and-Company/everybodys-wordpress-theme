@@ -71,7 +71,7 @@ function eb_get_nav_menu($menu_data) {
 											$event->post_title,
 											implode(', ', array_filter(array(get_post_meta($event->ID, '_event_date', true), 
 																			 get_post_meta($event->ID, '_event_time', true), 
-																			 get_post_meta($event->ID, '_event_price', true))));
+																			 get_post_meta($event->ID, '_event_price', true)))));
 				                        printf('</dl>');
 					                }
 					                wp_reset_postdata();
