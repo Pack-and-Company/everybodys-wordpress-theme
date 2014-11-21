@@ -69,12 +69,15 @@ function eb_get_nav_menu($menu_data) {
 										printf(
 											'<dd class="event-info"><strong>%s</strong><br>%s</dd>',
 											$event->post_title,
-											implode(', ', array(
-															  get_post_meta($event->ID, '_event_date', true), 
-															  get_post_meta($event->ID, '_event_time', true), 
-															  get_post_meta($event->ID, '_event_price', true)
-														 ))
-										);
+											implode(', ', 
+												array_filter(
+													array(
+														get_post_meta($event->ID, '_event_date', true), 
+														get_post_meta($event->ID, '_event_time', true), 
+														get_post_meta($event->ID, '_event_price', true)
+													)
+												)
+											);
 				                        printf('</dl>');
 					                }
 					                wp_reset_postdata();
