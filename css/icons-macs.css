@@ -27,3 +27,13 @@
 .nav li a.icon-contact.selected {
     background-image: url(../images/icons-macs/icon-phone.png);
 }
+
+.nav li a.icon-promotions:hover,
+.nav li a.icon-promotions.selected {
+    background-image: url(../images/icons-macs/icon-shield-with-question-mark.png);
+}
+
+.nav li a.icon-functions:hover,
+.nav li a.icon-functions.selected {
+    background-image: url(../images/icons-macs/icon-wine-glasses.png);
+}
